@@ -1,0 +1,19 @@
+<% weibos.forEach(function(weibo, index) {
+	if (index % 3 == 0) { %>
+		<div class = "row">
+	<% } %>
+
+	<div class = "span4">
+		<h2><a href="/<%= weibo.user %>"><%= weibo.user %></a></h2> 
+		<p><small><%= weibo.time %></small></p>
+		<p><%= weibo.content %></p>
+	</div>
+
+	<% if (index % 3 == 2) { %>
+		</div>
+	<% } %>	
+<% }) %>
+
+<% if (weibos.length % 3 != 0) { %>
+		</div>
+<% } %>

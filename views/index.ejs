@@ -1,0 +1,17 @@
+
+
+<% if (!user) {%>
+	<div class="hero-unit" style = "margin-top:10px">
+		<h1>吴子奇的尝鲜新想法</h1>
+		<p>奇奇网 是一个完全匿名的吐槽网站</p> 
+		<p>
+			<a class="btn btn-primary btn-large" href="/login">登陆</a>
+			<a class="btn btn-large" href="/reg">立即注册</a> 
+		</p>
+	</div>
+<% } else { %>
+	<%- partial('say') %>
+<% } %>
+
+<%- partial('weibos', {weibos:weibos}) %>
+
